@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- Handler Mapping -->
+	<bean id="beanNameUrlHandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+		
+</bean>
+
+	<!-- ViewResolver -->
+	<bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<!-- view name : 나중에 모듈이 abc.jsp를 보낼때 abc 이렇게만 보낸다
+			그렇지만 실제 주소는 abc.jsp이므로 /와 .jsp 라는게 필요함
+	 -->
+	 <property name="prefix" value="/" />
+	 <property name="suffix" value=".jsp" />
+</bean>
+	<!-- Controller -->
+	<bean id="/hello.do" class="kr.co.soldesk.www.HelloController">
+		
+</bean>
+</beans>
